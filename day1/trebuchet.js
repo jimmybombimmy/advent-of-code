@@ -5,8 +5,6 @@ fs.readFile("./day1/puzzle-input.txt", "utf-8", async (err, data) => {
   const numsOnly = dataSplit.map((line)=> {
     let newLine = line.match(/oneight|nineight|threeight|sevenine|eightwo|twone|one|two|three|four|five|six|seven|eight|nine|[0-9]/gi)
     const newerLine = newLine.map(num => {
-      // console.log(num)
-      console.log(num)
       if (num === "oneight") {
         return "18"
       } 
@@ -59,7 +57,6 @@ fs.readFile("./day1/puzzle-input.txt", "utf-8", async (err, data) => {
         return num
       }
     })
-    console.log(newerLine)
     return newerLine.join("")
   })
   const firstAndLastNumsOnly = numsOnly.map(num => {
@@ -76,7 +73,6 @@ fs.readFile("./day1/puzzle-input.txt", "utf-8", async (err, data) => {
     addAllNumbers += num
   })
   for (let i = 0; i < dataSplit.length; i++) {
-    console.log(dataSplit[i], numsOnly[i], firstAndLastNumsOnly[i])
   }
   console.log(addAllNumbers)
 })
